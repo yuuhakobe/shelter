@@ -1,0 +1,303 @@
+/* veriables */
+:root {
+    --accent: #F1CDB3;
+    --colorWhite: #fff;
+    --colorSubTxt: #FAFAFA;
+    --colorSubTxtDarken: #CDCDCD;
+    --colorDark: #292929;
+    --bcGrey: #F6F6F6; 
+    --HeaderTxtColor: #545454;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+}
+/* Header */
+header { /* Background */
+    width: 1920px; height: 908px;
+    background: url(../img/pattern-noise.png), -o-radial-gradient(0% 0%, 100% 215.42%, #5B483A 0%, #262425 100%), #211F20;
+    background: url(../img/pattern-noise.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+.container {
+    width: 1200px; height: 60px;
+    margin: 0 auto;
+   
+}
+.containerInner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 56px;
+}
+/* header logo */
+.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: Georgia, sans-serif;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.logoPartOne {
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    line-height: 51px;
+    color: var(--accent);
+}
+.logoPartTwo {
+    font-family: Arial, sans-serif; font-weight: normal; font-size: 13px;
+    letter-spacing: 0.1em;
+    padding-left: 4px;
+    color: var(--colorWhite);
+}
+/* header navigation */
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+nav li {
+    list-style: none;
+    padding-left: 34px; 
+}
+nav li a {
+    font-family: Arial; font-style: normal; font-weight: normal; font-size: 15px;
+    color: var(--colorSubTxtDarken);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    position: relative;
+    -webkit-transition: .3s linear;
+    -o-transition: .3s linear;
+    transition: .3s linear;
+}
+nav li a:hover {
+    color: var(--colorSubTxt);
+}
+nav li a:before {
+    content: '';
+    width: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+nav li a:hover:before {
+    content: '';
+    width: 100%; height: 3px;
+    background-color: #F1CDB3;
+    position: absolute; bottom: -5px;
+}
+/* header center */
+.containerInner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.headerLeft {
+    width: 460px; min-height: 29em;
+}
+.headerLeft h2 {
+    color: var(--colorWhite);
+
+    font-family: Georgia; font-style: normal; font-weight: normal;
+    font-size: 44px;
+    line-height: 130%;
+}
+.headerLeft p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--colorSubTxtDarken);
+    margin-top: 40px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 3.8em;
+}
+.headerLeft a {
+    padding: 15px 45px;
+    color: var(--colorDark);
+    background-color: var(--accent);
+    border-radius: 30px;
+    text-decoration: none;
+
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear;
+}
+.headerLeft a:hover {
+    background-color: #e49f6d;
+    color: white;
+}
+.headerRight {
+    width: 698px;
+    min-height: 728px;
+}
+/* Section about the shelter */
+#aboutTheShelter {
+    width: 1200px; min-height: 408px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    /* justify-content: center; */ justify-content: space-around;
+    margin-top: 5em;
+    
+}
+.aboutTheShelterLeft {
+    width: 300px;
+    height: 408px;
+    margin-left: 123px;
+}
+.aboutTheShelterRight {
+    width: 430px;
+    margin-right: 105px;
+}
+.aboutTheShelterRight h3 {
+    font-family: Georgia; font-style: normal; font-weight: normal;
+    font-size: 35px;
+    line-height: 44px;
+    margin-top: 15px; margin-bottom: 26px;
+    letter-spacing: 0.06em;
+    color: var(--HeaderTxtColor);
+}
+.aboutTheShelterRight p {
+    color: #4C4C4C;
+    font-family: Arial; font-style: normal; font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    margin-bottom: 25px;
+}
+/* section our pets */
+#ourPets {
+    min-height: 877px;
+    background-color: var(--bcGrey);
+    text-align: center;
+}
+#ourPets h3 {
+    padding-top: 70px; padding-left: 18px;
+    font-family: Georgia;
+    font-style: normal; font-weight: normal; font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--HeaderTxtColor);
+}
+.ourPetsCarusel {
+    width: 1222px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    column-gap: 90px;
+    justify-content: center;
+    position: relative;
+}
+.ourPetsCarusel::before {
+    content: url(../img/icons/arrow.svg);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 45px;top: 49.3%;
+    cursor: pointer;
+}
+.ourPetsCarusel::after {
+    content: url(../img/icons/arrow.svg);
+    transform: rotate(180deg)!important;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    width: 50px;height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    right: 3px; top: 44.3%;
+    cursor: pointer;
+}
+
+.ourPetsCaruselElement {
+    background-color: var(--colorSubTxt);
+    width: 270px;height: 435px;
+    margin-top: 54px; margin-left: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-left: 8px;}
+.ourPetsCaruselElement:hover {
+    background-color: var(--colorWhite);
+}
+
+.ourPetsCaruselElement img {
+    width: 200px;height: 240px;
+}
+.ourPetsCaruselElement span {
+    margin-top: 30px;
+    color: var(--HeaderTxtColor); 
+    font-family: Georgia; font-style: normal; font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+.ourPetsCaruselElement a {
+    font-family: Georgia; font-style: normal; font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+    color: #292929;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    border: 2px solid var(--accent);
+    border-radius: 26px;
+    padding: 12px 41px;
+    margin-top: 31px;
+    transition: .2s linear;
+}
+.ourPetsCaruselElement a:hover {
+    background-color: var(--accent);
+    color: var(--HeaderTxtColor);
+}
+#ourPetsButton {
+    text-decoration: none;
+    color: var(--colorDark);
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+
+    padding: 15px 44px;
+    background-color: var(--accent);
+    border-radius: 20px;
+}
+.buttonWrapper {
+    margin-top: 47px;
+    padding-left: 17px;
+}
