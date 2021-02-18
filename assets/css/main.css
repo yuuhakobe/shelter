@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* veriables */
 :root {
     --accent: #F1CDB3;
@@ -162,8 +169,10 @@ nav li a:hover:before {
     width: 1200px; min-height: 408px;
     margin: 0 auto;
     margin-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    /* justify-content: center; */ justify-content: space-around;
+    /* justify-content: center; */ -ms-flex-pack: distribute; justify-content: space-around;
     margin-top: 5em;
     
 }
@@ -208,10 +217,16 @@ nav li a:hover:before {
 .ourPetsCarusel {
     width: 1222px;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 270px 90px 270px 90px 270px;
     grid-template-columns: repeat(3, 270px);
-    column-gap: 90px;
-    justify-content: center;
+    -webkit-column-gap: 90px;
+       -moz-column-gap: 90px;
+            column-gap: 90px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 .ourPetsCarusel::before {
@@ -221,24 +236,42 @@ nav li a:hover:before {
 
     width: 50px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     position: absolute;
     left: 45px;top: 49.3%;
     cursor: pointer;
 }
 .ourPetsCarusel::after {
     content: url(../img/icons/arrow.svg);
-    transform: rotate(180deg)!important;
+    -webkit-transform: rotate(180deg)!important;
+        -ms-transform: rotate(180deg)!important;
+            transform: rotate(180deg)!important;
     border: 1px solid var(--accent);
     border-radius: 50%;
     width: 50px;height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     position: absolute;
     right: 3px; top: 44.3%;
     cursor: pointer;
@@ -248,9 +281,16 @@ nav li a:hover:before {
     background-color: var(--colorSubTxt);
     width: 270px;height: 435px;
     margin-top: 54px; margin-left: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
     margin-left: 8px;}
 .ourPetsCaruselElement:hover {
     background-color: var(--colorWhite);
@@ -278,6 +318,8 @@ nav li a:hover:before {
     border-radius: 26px;
     padding: 12px 41px;
     margin-top: 31px;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
     transition: .2s linear;
 }
 .ourPetsCaruselElement a:hover {
